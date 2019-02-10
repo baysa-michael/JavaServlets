@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="3.0"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+	<!-- To save as 
+	"C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\javaservlets\WEB-INF\web.xml" -->
+	<servlet>
+		<servlet-name>JavaSimpleServlet</servlet-name>
+		<servlet-class>javasimpleservlet.SimpleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>JavaFormServlet</servlet-name>
+		<servlet-class>javasimpleservlet.FormServlet</servlet-class>
+	</servlet>
+	
+	<!-- Note from Instructions:  All <servlet> elements MUST be grouped together and
+	placed IN FRONT of teh <servlet-mapping> elements -->
+	
+	<servlet-mapping>
+		<servlet-name>JavaSimpleServlet</servlet-name>
+		<url-pattern>/testServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JavaFormServlet</servlet-name>
+		<url-pattern>/testForm</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
